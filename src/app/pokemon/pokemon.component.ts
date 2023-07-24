@@ -21,7 +21,7 @@ export class PokemonComponent implements OnInit {
   pokemons: any[] = []; // Lista de Pokémon a mostrar en la página (inicialmente vacía)
   pokeStats: any[] = []; // Lista de estadísticas de los Pokémon (inicialmente vacía)
   currentPage: number = 0; // Número de página actual (inicialmente 0)
-  pageSize: number = 42; // Tamaño de página, es decir, cantidad de Pokémon a mostrar por página (inicialmente 20)
+  pageSize: number = 14; // Tamaño de página, es decir, cantidad de Pokémon a mostrar por página (inicialmente 14)
   totalPokemons: number = 0; // Número total de Pokémon (inicialmente 0)
   isLoading: boolean = false; // Agregar la propiedad isLoading e inicializarla como false
 
