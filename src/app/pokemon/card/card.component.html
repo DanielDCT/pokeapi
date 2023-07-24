@@ -1,0 +1,32 @@
+<div class="container">
+    <!-- Inicio del bucle *ngFor que recorre la lista de pokémones (listPokemons) -->
+    <div id="liPokemons" [class]="pokemon.types[0].type.name" *ngFor="let pokemon of listPokemons">
+        <!-- Mostrar las imágenes frontal y trasera del pokémon -->
+        <span>
+            <img #front src={{pokemon.sprites.front_default}} [title]=pokemon.name.toUpperCase()>
+            <img #back src={{pokemon.sprites.back_default}} [title]=pokemon.name.toUpperCase()>
+        </span>
+
+        <!-- Mostrar el nombre del pokémon en mayúsculas -->
+        <span><b>Name:</b> {{pokemon.name.toUpperCase()}}</span>
+        <hr>
+
+        <!-- Mostrar el primer tipo del pokémon (Type 1) -->
+        <span><b>Type 1:</b> {{pokemon.types[0].type.name}}</span>
+
+        <!-- Comprobar si el pokémon tiene un segundo tipo (Type 2) -->
+        <span *ngIf="pokemon.types.length == 2">
+            <b>Type 2:</b> {{pokemon.types[1].type.name}}
+        </span>
+        <hr>
+
+        <!-- Mostrar los stats base del pokémon -->
+        <span><b>Base stats:</b></span>
+        <!-- Inicio del bucle *ngFor que recorre los stats del pokémon (pokemon.stats) -->
+        <div class="statsPokemon" *ngFor="let baseStat of pokemon.stats">
+            <span>{{baseStat.stat.name}} = {{baseStat.base_stat}}</span>
+        </div>
+        <!-- Fin del bucle *ngFor de los stats del pokémon -->
+    </div>
+    <!-- Fin del bucle *ngFor de la lista de pokémones -->
+</div>

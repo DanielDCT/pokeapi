@@ -1,0 +1,92 @@
+section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 45px 0 45px 0;
+    background: #05011e;
+    }
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    color: aliceblue;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    }
+
+.content-button {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+    }
+
+::ng-deep.mat-paginator {
+    border-radius: 10px;
+    padding: 0 20px;
+    }
+
+::ng-deep.mat-mdc-paginator-container {
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+    }
+
+::ng-deep.mat-mdc-paginator-range-actions {
+    background: #f5f5f7;
+    border-radius: 10px;
+    }
+
+@media (max-width: 991px) {
+    section {
+        padding: 25px 0 15px 0;
+        }
+
+    h1 {
+        margin-bottom: 10px;
+        }
+
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0px 10px;
+        }
+
+    .content-button {
+        margin-top: 10px;
+        }
+
+    ::ng-deep.mat-paginator {
+        border-radius: 10px;
+        padding: 0 0 5px 0;
+        margin: 5px 10px;
+        width: 100%;
+        }
+
+    ::ng-deep.mat-mdc-paginator-container {
+        font-weight: 600;
+        font-size: 11px;
+        letter-spacing: 1px;
+        display: flex;
+        flex-direction: column;
+        }
+
+    ::ng-deep.mat-mdc-paginator-range-actions .mat-mdc-paginator-range-label {
+        font-size: 10px;
+        font-weight: 700;
+        margin: 0 12px 0 12px;
+        }
+
+    ::ng-deep.mat-mdc-paginator-range-actions {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        }
+
+    ::ng-deep.mat-mdc-icon-button.mat-mdc-button-base {
+        width: 35px;
+        }
+}

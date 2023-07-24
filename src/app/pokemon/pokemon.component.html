@@ -1,0 +1,28 @@
+<section>
+    <!-- Mostrar el LoaderComponent mientras se cargan los Pokémon de la página actual -->
+    <app-loader *ngIf="isLoading"></app-loader>
+        <h1>API Pokemon</h1>
+    <div class="header">
+        <app-search (searchChanged)="onSearchChanged($event)"></app-search>
+    </div>
+
+    <!-- Renderiza el componente 'app-card' y le pasa el array 'pokemons' como una propiedad llamada 'listPokemons' -->
+    <app-card [listPokemons]="pokemons"></app-card>
+
+    <div class="content-button">
+        <mat-paginator class="mat-paginator"
+            [length]="totalPokemons" 
+            [pageSize]="pageSize" 
+            [pageIndex]="currentPage" 
+            (page)="onPageChanged($event)"
+            showFirstLastButtons>
+        </mat-paginator>
+        <!-- Renderiza el componente 'mat-paginator' de Angular Material para la paginación -->
+        <!-- Se configuran las siguientes propiedades y eventos:
+            - 'length' se establece con el valor de 'totalPokemons' para indicar el número total de elementos a paginar.
+            - 'pageSize' se establece con el valor de 'pageSize' para indicar cuántos elementos se muestran por página.
+            - 'pageIndex' se establece con el valor de 'currentPage' para indicar el índice de la página actual.
+            - El evento '(page)' se enlaza con el método 'onPageChanged' cuando se cambia de página.
+            - 'showFirstLastButtons' se establece para mostrar los botones de ir a la primera y última página. -->
+    </div>
+</section>

@@ -1,0 +1,154 @@
+.container{
+    width: 100%;
+    gap: 15px;
+    grid-row: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+
+hr {
+    border: 1px solid #484848;
+    }
+
+#liPokemons{
+    border-radius: 15px;
+    width: 200px;
+    padding: 0 10px 10px 10px;
+    }
+
+#liPokemons span, .statsPokemon span{
+    display: block;
+    width: 100%;
+    text-transform: capitalize;
+    margin: 2px 0 2px 0;
+    font-weight: 500;
+    font-size: 12px;
+    }
+
+.statsPokemon {
+    margin-left: 20px;
+    }
+
+/** Pokemons imgs **/
+img{
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 3px;
+    }
+
+@media (max-width: 660px) {
+    .container{
+        width: 100%;
+        gap: 8px;
+        grid-row: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+
+    #liPokemons{
+        width: 145px;
+        padding: 0 5px 5px 5px;
+        }
+
+    #liPokemons span, .statsPokemon span{
+        margin: 0;
+        font-size: 11px;
+        }
+
+    .statsPokemon {
+        margin-left: 0;
+        }
+}
+
+/** div Colors from types **/
+.grass {
+    border: 2px solid #73c240;
+    background-color: #b2d977;
+    }
+
+.fire {
+    border: 2px solid #f47d30;
+    background-color: #f8a878;
+    }
+
+.water {
+    border: 2px solid #6390f0;
+    background-color: #9db7f5;
+    }
+
+.bug {
+    border: 2px solid #8cb330;
+    background-color: #c6d16e;
+    }
+
+.flying {
+    border: 2px solid #7d9bf0;
+    background-color: #c6d5f5;
+    }
+
+.normal {
+    border: 2px solid #9da0aa;
+    background-color: #d3d3d3;
+    }
+
+.dark {
+    border: 2px solid #5a5366;
+    background-color: #8f8a99;
+    }
+
+.dragon {
+    border: 2px solid #5533cc;
+    background-color: #9370db;
+    }
+
+.electric {
+    border: 2px solid #f6bb2b;
+    background-color: #fad271;
+    }
+
+.fairy {
+    border: 2px solid #eb679f;
+    background-color: #f7a8c8;
+    }
+
+.fighting {
+    border: 2px solid #a2351e;
+    background-color: #d67873;
+    }
+
+.ghost {
+    border: 2px solid #5a5262;
+    background-color: #8d85a4;
+    }
+
+.ground {
+    border: 2px solid #d97746;
+    background-color: #f0ca88;
+    }
+
+.ice {
+    border: 2px solid #61bede;
+    background-color: #a4e1e6;
+    }
+
+.poison {
+    border: 2px solid #8d5585;
+    background-color: #c183c1;
+    }
+
+.rock {
+    border: 2px solid #a78c45;
+    background-color: #d1c17d;
+    }
+
+.steel {
+    border: 2px solid #9e9eab;
+    background-color: #d3d3eb;
+    }
+
+.psychic {
+    border: 2px solid #f74383;
+    background-color: #f8a5c2;
+    }
