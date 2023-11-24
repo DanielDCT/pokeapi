@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatToolbarModule } from '@angular/material/toolbar'; //ng add @angular/material
 import { MatIconModule } from '@angular/material/icon'; //ng add @angular/material
 import { MatButtonModule } from '@angular/material/button'; //ng add @angular/material
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { HttpClientModule } from '@angular/common/http';
 import { ScrollingModule } from '@angular/cdk/scrolling';
@@ -41,8 +43,9 @@ import { SearchComponent } from './search/search.component';
     BrowserAnimationsModule,
     MatSelectModule,
     FormsModule,
-    ReactiveFormsModule
-    
+    ReactiveFormsModule,
+    MatAutocompleteModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

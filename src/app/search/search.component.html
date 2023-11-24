@@ -1,4 +1,23 @@
 <div class="search-container">
-  <input type="text" [(ngModel)]="searchTerm" (keyup.enter)="onSearch()" placeholder="Buscar Pokémon">
-  <button (click)="onSearch()">Buscar</button>
+  <!-- Contenedor principal para elementos de búsqueda -->
+  
+  <!-- Campo de entrada de búsqueda -->
+  <input type="text" [formControl]="searchTerm" [matAutocomplete]="auto" (keyup.enter)="performSearch()">
+  <!-- Tipo de entrada de texto vinculado a 'searchTerm' con autocompletado y detección de tecla 'Enter' -->
+
+  <!-- Botón de búsqueda -->
+  <button (click)="performSearch()">Buscar</button>
+  <!-- Botón que llama a la función 'performSearch()' al hacer clic -->
+
+  <!-- Menú desplegable de autocompletado -->
+  <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onOptionSelected($event)">
+    <!-- Componente de autocompletado mat-autocomplete -->
+    
+    <!-- Opciones del autocompletado -->
+    <mat-option *ngFor="let pokemon of filteredPokemons" [value]="pokemon">
+      <!-- Opción individual en el autocompletado -->
+      {{ pokemon }}
+      <!-- Nombre del Pokémon como opción de autocompletado -->
+    </mat-option>
+  </mat-autocomplete>
 </div>

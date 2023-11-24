@@ -57,6 +57,7 @@ button:hover {
 @media (max-width: 660px) {
     .search-container{
         flex-direction: column;
+        margin: 10px 0;
         }
 
     input {

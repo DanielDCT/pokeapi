@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import axios from 'axios';
 import { ViewportScroller } from '@angular/common';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { HttpClient } from '@angular/common/http';
+
+@Injectable()
 
 // Clase personalizada de MatPaginatorIntl
 export class CustomPaginatorIntl extends MatPaginatorIntl {
